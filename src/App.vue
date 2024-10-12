@@ -1,15 +1,25 @@
-<script setup>
+<script>
+import PNF from "./components/PNF.vue";
+export default {
+  name: "App",
+  components: {PNF}
+}
 </script>
 
 <template>
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-
   </header>
 
   <main>
-
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/login/billy">Login</RouterLink>
+    <RouterLink to="/login/john">Login2</RouterLink>
+    <RouterLink to="/login/arthur">Login3</RouterLink>
+    <RouterLink to="/login/tommy">Login4</RouterLink>
+    <RouterLink to="/signup">Signup</RouterLink>
+    <RouterView></RouterView>
+    <PNF/>
   </main>
 </template>
 

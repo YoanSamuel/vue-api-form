@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: 'SignUp-com',
+  name: 'Signup-com',
 }
 </script>
 

@@ -1,7 +1,8 @@
 import {createWebHistory, createRouter} from "vue-router";
-import Home from "./components/Home";
-import Login from "./components/Login";
-import SignUp from "./components/SignUp";
+import Home from "./components/Home.vue";
+import Login from "./components/Login.vue";
+import SignUp from "./components/SignUp.vue";
+import PNF from "./components/PNF.vue";
 
 const routes = [
     {
@@ -11,13 +12,18 @@ const routes = [
     },
     {
         name:"Login-com",
-        path: "/",
+        path: "/login/:name",
         component: Login,
     },
     {
         name:"SignUp-com",
-        path: "/",
+        path: "/signup",
         component: SignUp,
+    },
+    {
+        name:"NotFound",
+        path: "/:pathMatch(.*)*",
+        component: PNF,
     }
 ];
 const router = createRouter({
